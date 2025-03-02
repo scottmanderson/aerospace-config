@@ -36,7 +36,8 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+#on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focused-monitor-changed = []
 
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -69,6 +70,21 @@ automatically-unhide-macos-hidden-apps = false
 # 'main' binding mode must be always presented
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
+
+    ### CUSTOM TOP CONFIG
+    alt-up = "fullscreen"
+
+    alt-ctrl-h = "focus-monitor left"
+    alt-ctrl-j = "focus-monitor down"
+    alt-ctrl-k = "focus-monitor up"
+    alt-ctrl-l = "focus-monitor right"
+
+    #alt-ctrl-shift-h = "move-node-to-monitor left"
+    #alt-ctrl-shift-j = "move-node-to-monitor down"
+    #alt-ctrl-shift-k = "move-node-to-monitor up"
+    #alt-ctrl-shift-l = "move-node-to-monitor right"
+
+    ### END CUSTOM TOP CONFIG
 
     # All possible keys:
     # - Letters.        a, b, c, ..., z
@@ -149,6 +165,17 @@ automatically-unhide-macos-hidden-apps = false
     alt-y = 'workspace Y'
     alt-z = 'workspace Z'
 
+    #\[workspace-to-monitor-force-assignment\]
+    #1 = 'main'
+    #2 = 'main'
+    #3 = 'main'
+    #4 = 'main'
+    #5 = 'main'
+    #6 = \['secondary', 'main'\]
+    #7 = \['secondary', 'main'\]
+    #8 = \['secondary', 'main'\]
+    #9 = \['secondary', 'main'\]
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
     alt-shift-2 = 'move-node-to-workspace 2'
@@ -181,6 +208,37 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-x = 'move-node-to-workspace X'
     alt-shift-y = 'move-node-to-workspace Y'
     alt-shift-z = 'move-node-to-workspace Z'
+    ctrl-alt-shift-1 = 'summon-workspace 1'
+    ctrl-alt-shift-2 = 'summon-workspace 2'
+    ctrl-alt-shift-3 = 'summon-workspace 3'
+    ctrl-alt-shift-4 = 'summon-workspace 4'
+    ctrl-alt-shift-5 = 'summon-workspace 5'
+    ctrl-alt-shift-6 = 'summon-workspace 6'
+    ctrl-alt-shift-7 = 'summon-workspace 7'
+    ctrl-alt-shift-8 = 'summon-workspace 8'
+    ctrl-alt-shift-9 = 'summon-workspace 9'
+    ctrl-alt-shift-a = 'summon-workspace A'
+    ctrl-alt-shift-b = 'summon-workspace B'
+    ctrl-alt-shift-c = 'summon-workspace C'
+    ctrl-alt-shift-d = 'summon-workspace D'
+    ctrl-alt-shift-e = 'summon-workspace E'
+    ctrl-alt-shift-f = 'summon-workspace F'
+    ctrl-alt-shift-g = 'summon-workspace G'
+    ctrl-alt-shift-i = 'summon-workspace I'
+    ctrl-alt-shift-m = 'summon-workspace M'
+    ctrl-alt-shift-n = 'summon-workspace N'
+    ctrl-alt-shift-o = 'summon-workspace O'
+    ctrl-alt-shift-p = 'summon-workspace P'
+    ctrl-alt-shift-q = 'summon-workspace Q'
+    ctrl-alt-shift-r = 'summon-workspace R'
+    ctrl-alt-shift-s = 'summon-workspace S'
+    ctrl-alt-shift-t = 'summon-workspace T'
+    ctrl-alt-shift-u = 'summon-workspace U'
+    ctrl-alt-shift-v = 'summon-workspace V'
+    ctrl-alt-shift-w = 'summon-workspace W'
+    ctrl-alt-shift-x = 'summon-workspace X'
+    ctrl-alt-shift-y = 'summon-workspace Y'
+    ctrl-alt-shift-z = 'summon-workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -189,6 +247,148 @@ automatically-unhide-macos-hidden-apps = false
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
+
+    ### CUSTOM Modal Binding 
+    ctrl-space = 'mode focus'
+
+
+[mode.focus.binding]
+    esc = ['reload-config', 'mode main']
+    m = ['mode move']
+    r = ['mode resize']
+
+    h = 'focus left'
+    j = 'focus down'
+    k = 'focus up'
+    l = 'focus right'
+
+    shift-h = "focus-monitor left"
+    shift-j = "focus-monitor down"
+    shift-k = "focus-monitor up"
+    shift-l = "focus-monitor right"
+
+
+    alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
+    alt-4 = 'workspace 4'
+    alt-5 = 'workspace 5'
+    alt-6 = 'workspace 6'
+    alt-7 = 'workspace 7'
+    alt-8 = 'workspace 8'
+    alt-9 = 'workspace 9'
+    alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+    alt-b = 'workspace B'
+    alt-c = 'workspace C'
+    alt-d = 'workspace D'
+    alt-e = 'workspace E'
+    alt-f = 'workspace F'
+    alt-g = 'workspace G'
+    alt-i = 'workspace I'
+    alt-m = 'workspace M'
+    alt-n = 'workspace N'
+    alt-o = 'workspace O'
+    alt-p = 'workspace P'
+    alt-q = 'workspace Q'
+    alt-r = 'workspace R'
+    alt-s = 'workspace S'
+    alt-t = 'workspace T'
+    alt-u = 'workspace U'
+    alt-v = 'workspace V'
+    alt-w = 'workspace W'
+    alt-x = 'workspace X'
+    alt-y = 'workspace Y'
+    alt-z = 'workspace Z'
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+    alt-shift-3 = 'move-node-to-workspace 3'
+    alt-shift-4 = 'move-node-to-workspace 4'
+    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-6 = 'move-node-to-workspace 6'
+    alt-shift-7 = 'move-node-to-workspace 7'
+    alt-shift-8 = 'move-node-to-workspace 8'
+    alt-shift-9 = 'move-node-to-workspace 9'
+    alt-shift-a = 'move-node-to-workspace A'
+    alt-shift-b = 'move-node-to-workspace B'
+    alt-shift-c = 'move-node-to-workspace C'
+    alt-shift-d = 'move-node-to-workspace D'
+    alt-shift-e = 'move-node-to-workspace E'
+    alt-shift-f = 'move-node-to-workspace F'
+    alt-shift-g = 'move-node-to-workspace G'
+    alt-shift-i = 'move-node-to-workspace I'
+    alt-shift-m = 'move-node-to-workspace M'
+    alt-shift-n = 'move-node-to-workspace N'
+    alt-shift-o = 'move-node-to-workspace O'
+    alt-shift-p = 'move-node-to-workspace P'
+    alt-shift-q = 'move-node-to-workspace Q'
+    alt-shift-r = 'move-node-to-workspace R'
+    alt-shift-s = 'move-node-to-workspace S'
+    alt-shift-t = 'move-node-to-workspace T'
+    alt-shift-u = 'move-node-to-workspace U'
+    alt-shift-v = 'move-node-to-workspace V'
+    alt-shift-w = 'move-node-to-workspace W'
+    alt-shift-x = 'move-node-to-workspace X'
+    alt-shift-y = 'move-node-to-workspace Y'
+    alt-shift-z = 'move-node-to-workspace Z'
+    ctrl-alt-shift-1 = 'summon-workspace 1'
+    ctrl-alt-shift-2 = 'summon-workspace 2'
+    ctrl-alt-shift-3 = 'summon-workspace 3'
+    ctrl-alt-shift-4 = 'summon-workspace 4'
+    ctrl-alt-shift-5 = 'summon-workspace 5'
+    ctrl-alt-shift-6 = 'summon-workspace 6'
+    ctrl-alt-shift-7 = 'summon-workspace 7'
+    ctrl-alt-shift-8 = 'summon-workspace 8'
+    ctrl-alt-shift-9 = 'summon-workspace 9'
+    ctrl-alt-shift-a = 'summon-workspace A'
+    ctrl-alt-shift-b = 'summon-workspace B'
+    ctrl-alt-shift-c = 'summon-workspace C'
+    ctrl-alt-shift-d = 'summon-workspace D'
+    ctrl-alt-shift-e = 'summon-workspace E'
+    ctrl-alt-shift-f = 'summon-workspace F'
+    ctrl-alt-shift-g = 'summon-workspace G'
+    ctrl-alt-shift-i = 'summon-workspace I'
+    ctrl-alt-shift-m = 'summon-workspace M'
+    ctrl-alt-shift-n = 'summon-workspace N'
+    ctrl-alt-shift-o = 'summon-workspace O'
+    ctrl-alt-shift-p = 'summon-workspace P'
+    ctrl-alt-shift-q = 'summon-workspace Q'
+    ctrl-alt-shift-r = 'summon-workspace R'
+    ctrl-alt-shift-s = 'summon-workspace S'
+    ctrl-alt-shift-t = 'summon-workspace T'
+    ctrl-alt-shift-u = 'summon-workspace U'
+    ctrl-alt-shift-v = 'summon-workspace V'
+    ctrl-alt-shift-w = 'summon-workspace W'
+    ctrl-alt-shift-x = 'summon-workspace X'
+    ctrl-alt-shift-y = 'summon-workspace Y'
+    ctrl-alt-shift-z = 'summon-workspace Z'
+
+[mode.move.binding]
+    esc = ['reload-config', 'mode main']
+    m = ['mode move']
+    r = ['mode resize']
+
+    h = 'move left'
+    j = 'move down'
+    k = 'move up'
+    l = 'move right'
+
+    alt-h = 'join-with left'
+    alt-j = 'join-with down'
+    alt-k = 'join-with up'
+    alt-l = 'join-with right'
+
+[mode.resize.binding]
+    esc = ['reload-config', 'mode main']
+    m = ['mode move']
+    r = ['mode resize']
+
+    ctrl-h = 'resize width -50'
+    ctrl-j = 'resize length -50'
+    ctrl-k = 'resize length -50'
+    ctrl-l = 'resize width +50'
+
+    alt-minus = 'resize smart -50'
+    alt-equal = 'resize smart +50'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -209,3 +409,8 @@ automatically-unhide-macos-hidden-apps = false
     down = 'volume down'
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
+
+##### CUSTOM
+## Disable Forced Phantom Workspace 11
+[workspace-to-monitor-force-assignment]
+10 = 'secondary'
