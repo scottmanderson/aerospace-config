@@ -362,8 +362,11 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-alt-shift-y = 'summon-workspace Y'
     ctrl-alt-shift-z = 'summon-workspace Z'
 
+    t = 'layout floating tiling'
+
 [mode.move.binding]
     esc = ['reload-config', 'mode main']
+    f = ['mode focus']
     m = ['mode move']
     r = ['mode resize']
 
@@ -379,13 +382,14 @@ automatically-unhide-macos-hidden-apps = false
 
 [mode.resize.binding]
     esc = ['reload-config', 'mode main']
+    f = ['mode focus']
     m = ['mode move']
     r = ['mode resize']
 
-    ctrl-h = 'resize width -50'
-    ctrl-j = 'resize length -50'
-    ctrl-k = 'resize length -50'
-    ctrl-l = 'resize width +50'
+    h = 'resize width -50'
+    j = 'resize height -50'
+    k = 'resize height -50'
+    l = 'resize width +50'
 
     alt-minus = 'resize smart -50'
     alt-equal = 'resize smart +50'
@@ -394,8 +398,9 @@ automatically-unhide-macos-hidden-apps = false
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
     esc = ['reload-config', 'mode main']
+    f = ['mode focus']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
-    f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+    # # # # # # # # f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
     backspace = ['close-all-windows-but-current', 'mode main']
 
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
